@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'node --version'
+                bat 'echo "Halo gan"'
+                bat 'echo "Pakabs?"'
             }
         }
     }
