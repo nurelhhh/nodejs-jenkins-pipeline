@@ -1,0 +1,23 @@
+{
+  "name": "first-pipeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nurelhhh/nodejs-jenkins-pipeline.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nurelhhh/nodejs-jenkins-pipeline/issues"
+  },
+  "homepage": "https://github.com/nurelhhh/nodejs-jenkins-pipeline#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}

@@ -1,11 +1,27 @@
 pipeline {
-    agent { any { image 'node:16.13.1-alpine' } }
+    agent any
+
+    tools {nodejs "node"}
+
     stages {
-        stage('build') {
+
+        stage('Clone git') {
             steps {
-                bat 'echo "Halo gan"'
-                bat 'echo "Pakabs?"'
+                git 'https://github.com/nurelhhh/nodejs-jenkins-pipeline'
             }
         }
+
+        stage('Install dependencies') {
+            steps {
+                bat 'npm install'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                bat 'npm test'
+            }
+        }
+
     }
 }
