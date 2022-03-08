@@ -1,15 +1,8 @@
+# syntax=docker/dockerfile:1
 FROM node:12-alpine
-
 RUN apk add --no-cache python2 g++ make
-
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-
-RUN npm install
-
+WORKDIR /app
 COPY . .
-
-EXPOSE 3000
-
+RUN yarn install
 CMD [ "node", "app.js" ]
+EXPOSE 3000
